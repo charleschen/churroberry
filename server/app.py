@@ -62,11 +62,9 @@ def repeat_command(count, action):
 
 @ask.intent('CommandTimesIntent')
 def command_times_intent(action, count):
-    print 'original action:', action, 'count:', count
     action_words = action.split(" ")[1:]
     count = int(count) if count else 1
     action = " ".join(action_words)
-    print "action", action_words, "count", count
     for i in xrange(count):
         command_completed = command(device_ip, action)
         if not command_completed:
@@ -77,7 +75,6 @@ def command_times_intent(action, count):
 
 @ask.intent('CommandIntent')
 def command_intent(action):
-    print 'action', action
     command_completed = command(device_ip, action)
     return result_speech(command_completed, action)
 
@@ -94,7 +91,6 @@ def source(count):
 def volume(direction, count):
     count = int(count)
     action = 'volume %s' % direction
-    print "VolumeIntent", action, count
     completed = repeat_command(count, action)
     return result_speech(completed, action)
 
