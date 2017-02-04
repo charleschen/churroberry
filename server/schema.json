@@ -1,0 +1,35 @@
+{
+  "intents": [
+    {
+      "intent": "CommandIntent",
+      "slots": [
+        {
+          "name": "action",
+          "type": "SONY_COMMAND"
+        }
+      ]
+    },
+    {
+      "intent": "SourceIntent",
+      "slots": [
+        {
+          "name": "count",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "VolumeIntent",
+      "slots": [
+        {
+          "name": "direction",
+          "type": "DIRECTION"
+        },
+        {
+          "name": "count",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    }
+  ]
+}

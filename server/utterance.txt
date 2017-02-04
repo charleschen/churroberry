@@ -1,0 +1,7 @@
+CommandIntent to {action}
+CommandIntent to change {action}
+CommandIntent change {action}
+
+SourceIntent set source {count}
+
+VolumeIntent set volume {direction} {count}
